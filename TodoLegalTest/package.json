@@ -1,0 +1,25 @@
+{
+    "name": "TodoLegalTest",
+    "version": "1.0.0",
+    "main": "main.js",
+    "scripts": {
+        "start": "node main.js"
+    },
+    "keywords": [
+        "util",
+        "functional",
+        "server",
+        "client",
+        "browser"
+    ],
+    "author": "Nelson",
+    "contributors": [],
+    "dependencies": {
+        "express": "^4.17.1",
+        "express-graphql": "^0.9.0",
+        "graphql": "^15.1.0",
+        "node-fetch": "^2.6.0",
+        "body-parser": "^1.19.0",
+        "express-session": "^1.17.0"
+    }
+}
