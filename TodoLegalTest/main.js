@@ -24,9 +24,9 @@ var server = new serverGraphql('localhost', 4000);
 //        .then(r => r.json())
 //        .then(data => console.log('data returned:', data));
     // Application Routes
-    server.app.use('/assets',server.express.static(`web/assets`));
+    server.app.use('/assets',server.express.static(`${__dirname}/public_html/web/assets`));
     server.app.use(server.express.json());
-    server.app.use(server.express.urlencoded());
+    server.app.use(server.express.urlencoded({ extended: false }));
     
     let checkAuth = (req,res,next)=> {
         // Here you can define custom rules / security checks (Middleware checks)
@@ -37,7 +37,7 @@ server.app.get('/', (req, res) => {
     return res.redirect('/index');
 });
 server.app.get('/index', (req, res) => {
-    res.sendFile(`${__dirname}/web/index.html`);
+    res.sendFile(`${__dirname}/public_html/web/index.html`);
 });
 
   
